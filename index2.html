@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Cursos - Estilo Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1877f2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-menu {
+            background-color: #1877f2;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s;
+        }
+        .content {
+            display: flex;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+            animation: slideIn 1s;
+        }
+        .course-list {
+            flex: 2;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .course-list i {
+            color: #1877f2;
+            margin-right: 5px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+        }
+        .profile-info {
+            text-align: center;
+        }
+        .profile-info h2 {
+            color: #333;
+        }
+        .profile-info p {
+            color: #777;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to
+            {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Lista de Cursos - Estilo Facebook</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="#">Inicio</a>
+        <a href="#">Amigos</a>
+        <a href="#">Mensajes</a>
+        <a href="#">Notificaciones</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <img src="descarga.png" alt="Foto de perfil">
+                <div class="profile-info">
+                    <h2>Tu Nombre</h2>
+                    <p>Estudiante</p>
+                    <p>Ubicación: Tu Ciudad</p>
+                </div>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i> Curso de Matemáticas
+                    </li>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i> Curso de Historia
+                    </li>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i> Curso de Ciencias Naturales
+                    </li>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i> Curso de Idiomas
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
