@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones de dos numeros</title>
+</head>
+<body>
+    <h1>Suma de x e y</h1>
+    <p>Ingresa dos números para realizar la suma:</p>
+    <input type="text" id="numeroX" placeholder="x">
+    <input type="text" id="numeroY" placeholder="y">
+    <button onclick="sumar()">Sumar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        alert('Se tendra las operaciones basicas de dos numeros!!!!')
+        function sumar() {
+            var x = parseFloat(document.getElementById("numeroX").value);
+            var y = parseFloat(document.getElementById("numeroY").value);
+            var resultado = x + y;
+            document.getElementById("resultado").textContent = resultado;
+        }
+    </script>
+     <hr size=10 width="100%" color="lead">
+    <h1>Resta de a y b</h1>
+    <p>Ingresa dos números para realizar la Resta:</p>
+    <input type="text" id="numeroA" placeholder="a">
+    <input type="text" id="numeroB" placeholder="b">
+    <button onclick="Resta()">Restar</button>
+    <p>Resultado: <span id="resulres"></span></p>
+
+    <script>
+        function Resta() {
+            var a = parseFloat(document.getElementById("numeroA").value);
+            var b = parseFloat(document.getElementById("numeroB").value);
+            var resulres = a - b;
+            document.getElementById("resulres").textContent = resulres;
+        }
+    </script>
+    <hr size=10 width="100%" color="lead">
+    <h1>Multiplicacion de c y d</h1>
+    <p>Ingresa dos números para realizar la Multiplicacion:</p>
+    <input type="text" id="numeroC" placeholder="c">
+    <input type="text" id="numeroD" placeholder="d">
+    <button onclick="Mult()">Multiplicar</button>
+    <p>Resultado: <span id="resulmul"></span></p>
+
+    <script>
+        function Mult() {
+            var c = parseFloat(document.getElementById("numeroC").value);
+            var d = parseFloat(document.getElementById("numeroD").value);
+            var resulmul = c * d;
+            document.getElementById("resulmul").textContent = resulmul;
+        }
+    </script>
+
+    <hr size=10 width="100%" color="lead">
+    <h1>Divicion de e y f</h1>
+    <p>Ingresa dos números para realizar la Division:</p>
+    <input type="text" id="numeroE" placeholder="e">
+    <input type="text" id="numeroF" placeholder="f">
+    <button onclick="Div()">Restar</button>
+    <p>Resultado: <span id="resuldiv"></span></p>
+
+    <script>
+        function Div() {
+            var e = parseFloat(document.getElementById("numeroE").value);
+            var f = parseFloat(document.getElementById("numeroF").value);
+            var resulDiv = e / f;
+            document.getElementById("resuldiv").textContent = resulDiv;
+        }
+    </script>
+</body>
+</html>
