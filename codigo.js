@@ -1,2 +1,1 @@
-alert("Soy el primer script");
-alert("Hola Mundo!!");
+alert("Hola Mundo!!"); alert("Soy el primer script");
