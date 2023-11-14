@@ -15,15 +15,11 @@ function compararEdades() {
             nombres.push(nombre);
         } else {
             alert("Por favor, ingresa una edad válida.");
-            i--; // Decrementa i para volver a solicitar la misma posición.
         }
     }
 
-    // Encontrar el índice de la edad mayor y menor
     let indiceMayor = edades.indexOf(Math.max(...edades));
     let indiceMenor = edades.indexOf(Math.min(...edades));
-
-    // Obtener los nombres correspondientes
     let nombreMayor = nombres[indiceMayor];
     let nombreMenor = nombres[indiceMenor];
 

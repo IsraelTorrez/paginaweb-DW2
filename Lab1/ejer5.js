@@ -6,7 +6,6 @@ function encontrarMayor() {
         inputNumero = prompt("Ingresa un número:");
 
         if (inputNumero === null) {
-            // El usuario pulsó cancelar
             break;
         }
 
@@ -20,7 +19,6 @@ function encontrarMayor() {
     }
 
     if (numeros.length > 0) {
-        // Encontrar el número mayor
         let mayor = Math.max(...numeros);
         alert("El número mayor es: " + mayor);
     } else {
