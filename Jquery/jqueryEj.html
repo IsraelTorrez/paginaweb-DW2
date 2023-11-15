@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo jQuery</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Mi Página con jQuery</h1>
+    
+    <!-- Botón en el HTML -->
+    <button id="miBoton">Haz clic</button>
+    
+    <script>
+        // Código jQuery
+        $(document).ready(function() {
+            // Seleccionamos el elemento con id "miBoton" y agregamos un evento de clic
+            $("#miBoton").click(function() {
+                // Acción a realizar cuando se hace clic en el botón
+                alert("¡Has hecho clic en el botón!");
+            });
+        });
+    </script>
+</body>
+</html>
