@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu {
+    background-color: #073776;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Añade un margen al cuerpo para evitar que el contenido se superponga debajo de la barra de navegación */
+body {
+    margin-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
+}
+
+/* Estilos adicionales para mejorar la apariencia de la página */
+#inicio {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#articulos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+}
+
+#registro {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#notificaciones {
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
