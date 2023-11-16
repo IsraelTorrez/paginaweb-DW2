@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo jQuery</title>
-    
+    <link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
@@ -22,6 +22,22 @@
                 alert("¡Has hecho clic en el botón!");
             });
         });
+        
     </script>
+    <script>
+        colors=['#FFB30C', '#58EC00', '#0087EC', '#EEEEEE', '#FF5A00' ]; var i = 0;
+
+    $box = $('div.box');
+
+    animate_loop = function() {
+
+    $(Sbox).animate({backgroundColor:colors[(1++)%colors.length]}
+    , 900, function(){ animate_loop();
+
+    });
+    }
+    animate_loop();
+    </script>
+    <div class="box"></div>
 </body>
 </html>
