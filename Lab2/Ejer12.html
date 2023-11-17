@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Ejemplo de solicitud GET con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+   $(document).ready(function() {
+    $("#c10").click(function() {
+        $.get('https://norfipc.com/codigos/jquery-ejemplospracticos-usar-paginas-web.php', function(data, status) {
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+});
+</script>
+              
+
+                   
+</head>
+<body>
+ 
+   
+    
+    <button id="c10">Realizar solicitud GET</button>    
+ 
+</body>
+</html>

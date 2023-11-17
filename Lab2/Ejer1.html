@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Ejercicio 1 - Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+   
+    </script>
+<script>
+      $(document).ready(function() {
+    $("#c1").click(function() {
+        $("#cont1").hide(1500);
+    });
+});
+</script>
+         
+<script>
+    $(document).ready(function() {
+      $("#c2").click(function() {
+      $("#cont1").show("slow");
+  });
+});
+</script>
+
+                   
+</head>
+<body>
+ 
+   
+    
+    <button style="color: rgb(41, 126, 126);" id="c1">Haz clic para ocultar</button>
+    
+    <button style="color: rgb(41, 126, 126);" id="c2">Haz clic para Mostrar</button>
+    
+    <div id="cont1">Este es el contenido que se ocultará o Mostrara</div>
+            
+ 
+</body>
+</html>

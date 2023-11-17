@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <meta charset="utf-8">
+ <style>
+    .divclass {
+ width: 90px;
+ height: 75px;
+ margin: 5px;
+ background-color:#F3E2A9
+}
+.divclass2 {
+ width: 90px;
+ height: 75px;
+ margin: 5px;
+ background-color:rgb(140, 119, 51)
+}
+ </style>
+ <title>JS Bin</title>
+</head>
+<body>
+ <div id="div1" class="divclass"></div>
+ <div id="div2" class="divclass2"></div>
+ <div id="div3"></div>
+
+ <script>
+    console.log($( "#div1" ).hasClass( "divclass" ).toString());
+console.log($( "#div2" ).hasClass( "divclass2" ).toString());
+console.log($( "#div3" ).hasClass( "divclass" ).toString());
+ </script>
+</body>
+</html>

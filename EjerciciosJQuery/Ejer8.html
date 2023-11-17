@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+    div {
+    width: 150px;
+    height:85px;
+    margin: 5px;
+    float: left;
+    background: #254BF4;
+    }
+    </style>
+    <meta charset="utf-8">
+    <title>Ejecuta una animación cambiando el número de fotogramas</title>
+   </head>
+   <body>
+    <p><input type="button" value="Run"></p>
+    <div></div>
+    <script>
+        jQuery.fx.interval = 200;
+$( "input" ).click(function() {
+ $( "div" ).toggle(3000);
+});
+    </script>
+   </body>
+   </html>

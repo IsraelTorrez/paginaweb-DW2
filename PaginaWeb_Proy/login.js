@@ -9,7 +9,7 @@ function iniciarSesion() {
         alert('Inicio de sesión exitoso!');
         
        
-      
+      localStorage.setItem('userEmail', email);
         
         // Redirige a la página principal después de iniciar sesión
         window.location.href = 'paginaHTML.html';

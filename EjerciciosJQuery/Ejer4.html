@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: #4234db;
+        }
+    </style>
+</head>
+<body>
+
+<p><input type="button" value="Run" id="runButton"></p>
+<div id="animacionDiv"></div>
+
+<script>
+    $(document).ready(function () {
+        function ejecutarAnimacion() {
+            $("#animacionDiv").animate({
+                width: "200px",
+                opacity: 0.5
+            }, {
+                duration: 2000, 
+                step: function (now, fx) {
+                    console.log("Fotograma " + fx.pos + ": Ancho = " + now);
+                },
+                complete: function () {
+                    console.log("Animación completada");
+                }
+            });
+        }
+
+        $("#runButton").click(function () {
+            ejecutarAnimacion();
+        });
+    });
+</script>
+
+</body>
+</html>

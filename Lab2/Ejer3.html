@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Ejercicio 1 - Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+   
+    </script>
+<script>
+      $(document).ready(function() {
+        $("#c3").click(function() {
+$("#cont1").animate({fontSize:'2.4em',width:400,padding:24},
+2500);
+});
+});
+</script>
+              
+
+                   
+</head>
+<body>
+ 
+   
+    
+    <button style="color: rgb(41, 126, 126);" id="c3">Haz clic para agrandar</button>
+    <div id="cont1">Este es el contenido  se agrandara</div>
+            
+ 
+</body>
+</html>

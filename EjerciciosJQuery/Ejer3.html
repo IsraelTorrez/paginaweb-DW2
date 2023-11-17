@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<div id="miDiv">Hola, este es un ejemplo2</div>
+
+<script>
+    $(document).ready(function () {
+        var valorDelDiv = $("#miDiv").text();
+        
+        console.log("El valor del div es: " + valorDelDiv);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de copiar texto con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $("#c12").click(function() {
+        var texto1 = $("h1").text();
+        $("#cont3").text(texto1);
+    });
+});
+
+    </script>
+</head>
+<body>
+
+    <h1>Texto a copiar</h1>
+    <button id="c12">Copiar Texto</button>
+    <div id="cont3"></div>
+
+</body>
+</html>

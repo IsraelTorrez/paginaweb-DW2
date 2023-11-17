@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de clonación con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script >
+        $(document).ready(function() {
+    $("#c13").click(function() {
+        var html1 = $("h1").clone();
+        $("#cont4").html(html1);
+    });
+});
+
+    </script>
+</head>
+<body>
+
+    <h1>Texto a clonar</h1>
+    <button id="c13">Clonar Texto</button>
+    <div id="cont4"></div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Ejercicio 11 - Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+   
+    </script>
+<script>
+      $(document).ready(function() {
+        $("#c8").click(function() {
+$("#noticias").load("../facebook/problemas-simbolos.php");
+});
+});
+</script>
+<script>
+     $(document).ready(function() {
+    $("#c9").click(function() {
+$("#noticias").hide(1500);
+});
+});
+</script>
+              
+
+                   
+</head>
+<body>
+ 
+   
+    
+    <button id="c8">Cargar Noticias</button>
+    <button id="c9">Ocultar Noticias</button>
+    <div id="noticias">
+        <!-- El contenido de noticias se cargará aquí -->
+    </div>
+            
+ 
+</body>
+</html>

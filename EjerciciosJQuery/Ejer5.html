@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery-git.js"></script>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>Como obtener el valor de un textbox usando jQuery:</title>
+</head>
+<body>
+ <input type="text" value="Añade el input">
+ <script>
+    $( "input" )
+.keyup(function() {
+ var tvalue = $( this ).val();
+ console.log(tvalue);
+})
+.keyup();
+ </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <meta charset="utf-8">
+ <title>Muestra el texto cuando los eventos mouseup y mousedown sie
+activan</title>
+</head>
+<body>
+ <p>Presiona el mouse y suelta aquí.</p>
+
+ <script>
+    $( "p" )
+.mouseup(function() {
+ $( this ).append("Mouse up." );
+})
+.mousedown(function() {
+ $( this ).append( "Mouse down" );
+});
+ </script>
+</body>
+</html>

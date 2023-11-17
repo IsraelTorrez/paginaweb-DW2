@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .divclass {
+            width: 90px;
+            height: 75px;
+            margin: 5px;
+            background-color: #F3E2A9;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="div1" class="divclass"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+
+<script>
+   $(document).ready(function () {
+       var elementoConClase = $(".divclass");
+
+        elementoConClase.css("background-color", "black");
+    });
+</script>
+
+</body>
+</html>
