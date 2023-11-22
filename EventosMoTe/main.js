@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let miBoton2 = document.getElementById("elBoton");
     let miParrafo2 = document.getElementById("elParrafo");
 
-    miBoton2.addEventListener("mouseover", () => {
+    miBoton2.addEventListener("mouseout", () => {
         miParrafo2.classList.toggle("parrafo-rojo");
     });
 });
+

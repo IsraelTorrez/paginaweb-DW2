@@ -132,3 +132,19 @@ button img {
     width: 20px;
     height: 20px;
 }
+/* Añade estos estilos en tu archivo de estilos CSS (estilos.css) */
+.producto-carrito {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.producto-carrito img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.info-producto {
+    flex-grow: 1;
+}

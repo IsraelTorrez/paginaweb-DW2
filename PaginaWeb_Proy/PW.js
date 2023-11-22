@@ -1,9 +1,92 @@
-let carrito = 0;
+//let carrito = 0;
 
-function agregarAlCarrito() {
-    carrito++;
-    alert("Producto agregado al carrito. Total en el carrito: " + carrito);
+//function agregarAlCarrito() {
+  //  carrito++;
+  //  alert("Producto agregado al carrito. Total en el carrito: " + carrito);
+//}
+// Supongamos que tienes un array para almacenar los productos seleccionados
+
+let carrito = [];
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(idProducto) {
+    // Busca el producto por su ID
+    const producto = productos.find(producto => producto.id === idProducto);
+
+    // Verifica si el producto existe
+    if (producto) {
+        carrito.push(producto);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarCarrito();
+    } else {
+        console.error('Producto no encontrado');
+    }
 }
+
+
+function actualizarCarrito() {
+    const carritoElement = document.getElementById('carrito');
+
+    // Limpia el contenido actual del carrito
+    carritoElement.innerHTML = '';
+
+    // Verifica si hay productos en el carrito
+    if (carrito.length === 0) {
+        carritoElement.innerHTML = '<p>El carrito está vacío</p>';
+    } else {
+        // Recorre los productos en el carrito y muestra la información
+        carrito.forEach(producto => {
+            const productoElement = document.createElement('div');
+            productoElement.classList.add('producto-carrito');
+
+            // Añade la imagen del producto
+            const imagenElement = document.createElement('img');
+            imagenElement.src = producto.imagen;
+            imagenElement.alt = producto.nombre;
+            productoElement.appendChild(imagenElement);
+
+            // Añade la información del producto
+            const infoElement = document.createElement('div');
+            infoElement.classList.add('info-producto');
+            infoElement.innerHTML = `<p>${producto.nombre} - Precio: ${producto.precio}</p>`;
+            productoElement.appendChild(infoElement);
+
+            carritoElement.appendChild(productoElement);
+        });
+    }
+}
+const productos = [
+    { id: 1, nombre: 'Play Station 4 Pro', precio: 3000.00 , imagen: 'https://gmedia.playstation.com/is/image/SIEPDC/ps4-pro-product-thumbnail-01-en-14sep21?$facebook$' },
+    { id: 2, nombre: 'Air Jordan 1 Mid', precio: 3119.00 },
+    { id: 3, nombre: 'Air Jordan 1 Mid', precio: 3119.00 },
+    { id: 4, nombre: 'Air Jordan 1 Mid', precio: 3119.00 },
+    // Agrega más productos según sea necesario
+];
+
+// Lógica de inicio de sesión (simulada)
+function iniciarSesion() {
+    // ... (lógica de inicio de sesión)
+    // Después del inicio de sesión exitoso, puedes agregar productos al carrito
+    agregarAlCarrito({ nombre: 'Producto de ejemplo', precio: 29.99 });
+
+    // Redirige a la página principal
+    window.location.href = 'paginaHTML.html';
+
+    // Importante: evita que el formulario se envíe
+    return false;
+}
+
+// Verifica si hay un carrito almacenado en el almacenamiento local al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    const carritoAlmacenado = localStorage.getItem('carrito');
+    if (carritoAlmacenado) {
+        // Convierte el carrito almacenado de cadena JSON a un array
+        carrito = JSON.parse(carritoAlmacenado);
+    }
+
+    // Actualiza la visualización del carrito al cargar la página
+    actualizarCarrito();
+});
 
 function validarRegistro() {
     // Obtenemos los valores de los campos
