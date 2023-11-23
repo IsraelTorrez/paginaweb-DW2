@@ -1,29 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="est.css">
-   
-    <title>Carrito de Compras - ADRYLu & IMT</title>
+    <!-- Enlaces a Bootstrap CSS y JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Estilos adicionales si es necesario -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu {
+            background-color: #073776;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        body {
+            margin-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
+        }
+    </style>
+
+    <title>Carrito de Compras</title>
 </head>
 <body>
-    <div class="nav-menu">
-        <a href="paginaHTML.html">Inicio</a>
-        <a href="carrito.html">Carrito de Compras</a>
-        <a href="articulos.html">Artículos</a>
-        <a href="#registro">Registro</a>
-        <a href="#notificaciones">Notificaciones</a>
-    </div>
-<h2>Carrito de Compras</h2> 
-    <div id="carrito" style="text-align: center; padding: 20px;">
-        
-        <script src="PW.js"></script>
-        <!-- Aquí puedes mostrar los productos agregados al carrito y su información -->
-        <!-- Puedes utilizar JavaScript para recuperar y mostrar dinámicamente los productos del carrito -->
-    </div>
 
-    <footer>
+    <!-- Barra de navegación utilizando Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="paginaHTML.html">Inicio</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito de Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articulos.html">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registro">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#notificaciones">Notificaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+<h2 class="text-center mt-4">Carrito de Compras</h2> 
+<div id="carrito" class="text-center" style="padding: 20px;">
+    <!-- Aquí puedes mostrar los productos agregados al carrito y su información -->
+    <!-- Puedes utilizar JavaScript para recuperar y mostrar dinámicamente los productos del carrito -->
+</div>
+
+<!-- Script mejorado -->
+<script>
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function actualizarCarrito() {
+        const carritoElement = document.getElementById('carrito');
+
+        // Limpia el contenido actual del carrito
+        carritoElement.innerHTML = '';
+
+        // Verifica si hay productos en el carrito
+        if (carrito.length === 0) {
+            carritoElement.innerHTML = '<p>El carrito está vacío</p>';
+        } else {
+            // Recorre los productos en el carrito y muestra la información
+            carrito.forEach(producto => {
+                const productoElement = document.createElement('div');
+                productoElement.classList.add('producto-carrito', 'border', 'p-3', 'm-2');
+
+                // Añade la imagen del producto
+                const imagenElement = document.createElement('img');
+                imagenElement.src = producto.imagen;
+                imagenElement.alt = producto.nombre;
+                imagenElement.classList.add('img-fluid', 'mb-3');
+                productoElement.appendChild(imagenElement);
+
+                // Añade la información del producto
+                const infoElement = document.createElement('div');
+                infoElement.classList.add('info-producto');
+                infoElement.innerHTML = `<p>${producto.nombre} - Precio: ${producto.precio}</p>`;
+                productoElement.appendChild(infoElement);
+
+                carritoElement.appendChild(productoElement);
+            });
+        }
+    }
+
+    // Lógica de inicio de sesión (simulada)
+    function iniciarSesion() {
+        // ... (lógica de inicio de sesión)
+        // Después del inicio de sesión exitoso, puedes agregar productos al carrito
+        // Ejemplo: agregarAlCarrito({ nombre: 'Producto de ejemplo', precio: 29.99, imagen: 'ruta/de/la/imagen.jpg' });
+
+        // Redirige a la página principal
+        window.location.href = 'paginaHTML.html';
+
+        // Importante: evita que el formulario se envíe
+        return false;
+    }
+
+    // Verifica si hay un carrito almacenado en el almacenamiento local al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+        // Actualiza la visualización del carrito al cargar la página
+        actualizarCarrito();
+    });
+</script>
+
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>Derechos reservados</p>
         <p>Contacto: <a href="mailto:isacmariaca@gmail.com">isacmariaca@gmail.com</a></p>
     </footer>
+
 </body>
 </html>
+

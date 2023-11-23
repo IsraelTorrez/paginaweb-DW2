@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Framework</title>
+</head>
+<body>
+
+    <template id="template-picture">
+        <div>
+            <h1>{{title}}</h1>
+            <img :src="picture_url" :alt="title" width="150">
+        </div>
+    </template>
+    <img src="" alt="" >
+
+    <div id="main">
+        <!-- <picture-card v-for="(picture, index) in pictures" :key="index" :title="picture.title" :picture_url="picture.picture_url">
+        </picture-card> -->
+        <picture-card title="Hello Word" picture_url="https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></picture-card>
+        <picture-card title="Mi title!!" picture_url="https://images.pexels.com/photos/3841338/pexels-photo-3841338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></picture-card>
+        <picture-card title="Take it!!" picture_url="https://images.pexels.com/photos/1570264/pexels-photo-1570264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></picture-card>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

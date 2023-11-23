@@ -26,31 +26,60 @@
     </style>
     <script src="PW.js">
     </script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+
     <title>Tienda en Línea</title>
 </head>
 <body>
 
-    <div id="inicio">
-        <h1 style="text-align: center; background-color: #333; color: #fff; padding: 10px;">Bienvenido a la Tienda en Línea ADRYLu & IMT</h1>
+    <div id="inicio" class="bg-dark text-white text-center py-3">
+        <h1>Bienvenido a la Tienda en Línea ADRYLu & IMT</h1>
     </div>
-
-    <div id="compras" class="nav-menu">
-        <a href="#inicio">Inicio</a>
-        <a href="carrito.html" onclick="alert('Ir al carrito de compras');">Compras/Carrito</a>
-        <a href="#articulos">Articulos</a>
-        <a href="#registro">Registro</a>
-        <a href="#notificaciones">Notificaciones</a>
-        
-        <input type="text" placeholder="Buscar..." id="search-input">
-        <button onclick="buscar()">
-        <img src="https://c0.klipartz.com/pngpicture/851/233/gratis-png-boton-de-busqueda-de-iconos-de-computadora-boton-de-busqueda.png" alt="Buscar">
-    </button>
-    <a href="login.html">Iniciar Sesión</a>
-        <span id="user-email" style="display: none;"></span>
-    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tienda en Línea</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html" onclick="alert('Ir al carrito de compras');">Compras/Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#articulos">Articulos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registro">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#notificaciones">Notificaciones</a>
+                    </li>
+                </ul>
+    
+                <form class="form-inline ml-auto">
+                    <input class="form-control mr-2" type="text" placeholder="Buscar..." id="search-input">
+                    <button class="btn btn-light" type="button" onclick="buscar()">
+                        <img src="https://c0.klipartz.com/pngpicture/851/233/gratis-png-boton-de-busqueda-de-iconos-de-computadora-boton-de-busqueda.png" alt="Buscar">
+                    </button>
+                </form>
+    
+                <a class="btn btn-outline-light ml-2" href="login.html">Iniciar Sesión</a>
+                <span id="user-email" style="display: none;"></span>
+            </div>
+        </div>
+    </nav>
+    
+    
     <script>
         // Obtén la barra de navegación
-        var navbar = document.getElementById('compras');
+        var navbar = document.getElementById('navbarNav');
 
         // Obtiene la posición inicial de la barra de navegación
         var initialOffset = navbar.offsetTop;
@@ -175,4 +204,6 @@
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
