@@ -2,58 +2,28 @@
 <html lang="es">
 <head>
     <!-- Enlaces a Bootstrap CSS y JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
 
+   
     <!-- Estilos adicionales si es necesario -->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu {
-            background-color: #073776;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        body {
-            margin-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
-        }
-    </style>
+  
 
     <title>Carrito de Compras</title>
 </head>
 <body>
-
-    <!-- Barra de navegación utilizando Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="paginaHTML.html">Inicio</a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gestión de Artículos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="carrito.html">Carrito de Compras</a>
+                        <a class="nav-link active" href="paginaHTML.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="articulos.html">Artículos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#registro">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#notificaciones">Notificaciones</a>
                     </li>
                 </ul>
             </div>
@@ -67,62 +37,7 @@
     <!-- Puedes utilizar JavaScript para recuperar y mostrar dinámicamente los productos del carrito -->
 </div>
 
-<!-- Script mejorado -->
-<script>
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-    function actualizarCarrito() {
-        const carritoElement = document.getElementById('carrito');
-
-        // Limpia el contenido actual del carrito
-        carritoElement.innerHTML = '';
-
-        // Verifica si hay productos en el carrito
-        if (carrito.length === 0) {
-            carritoElement.innerHTML = '<p>El carrito está vacío</p>';
-        } else {
-            // Recorre los productos en el carrito y muestra la información
-            carrito.forEach(producto => {
-                const productoElement = document.createElement('div');
-                productoElement.classList.add('producto-carrito', 'border', 'p-3', 'm-2');
-
-                // Añade la imagen del producto
-                const imagenElement = document.createElement('img');
-                imagenElement.src = producto.imagen;
-                imagenElement.alt = producto.nombre;
-                imagenElement.classList.add('img-fluid', 'mb-3');
-                productoElement.appendChild(imagenElement);
-
-                // Añade la información del producto
-                const infoElement = document.createElement('div');
-                infoElement.classList.add('info-producto');
-                infoElement.innerHTML = `<p>${producto.nombre} - Precio: ${producto.precio}</p>`;
-                productoElement.appendChild(infoElement);
-
-                carritoElement.appendChild(productoElement);
-            });
-        }
-    }
-
-    // Lógica de inicio de sesión (simulada)
-    function iniciarSesion() {
-        // ... (lógica de inicio de sesión)
-        // Después del inicio de sesión exitoso, puedes agregar productos al carrito
-        // Ejemplo: agregarAlCarrito({ nombre: 'Producto de ejemplo', precio: 29.99, imagen: 'ruta/de/la/imagen.jpg' });
-
-        // Redirige a la página principal
-        window.location.href = 'paginaHTML.html';
-
-        // Importante: evita que el formulario se envíe
-        return false;
-    }
-
-    // Verifica si hay un carrito almacenado en el almacenamiento local al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
-        // Actualiza la visualización del carrito al cargar la página
-        actualizarCarrito();
-    });
-</script>
+<script src="PW.js"></script>
 
 
     <!-- Pie de página -->
@@ -132,5 +47,8 @@
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.js" integrity="sha384-q8i/X+965DzO0r7zqZaP7z9AJKnN8J3Uf5+5eD5Cplzqycb4z6eP5qDOsRE6A/jC" crossorigin="anonymous"></script>
+
 </html>
 

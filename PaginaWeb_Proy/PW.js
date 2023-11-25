@@ -6,8 +6,7 @@
 //}
 // Supongamos que tienes un array para almacenar los productos seleccionados
 
-let carrito = [];
-
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 // Función para agregar un producto al carrito
 function agregarAlCarrito(idProducto) {
     // Busca el producto por su ID
@@ -24,62 +23,62 @@ function agregarAlCarrito(idProducto) {
 }
 
 
-const carrit = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    function actualizarCarrito() {
-        const carritElement = document.getElementById('carrito');
 
-        // Limpia el contenido actual del carrito
-        carritElement.innerHTML = '';
+function actualizarCarrito() {
+    const carritoElement = document.getElementById('carrito');
 
-        // Verifica si hay productos en el carrito
-        if (carrit.length === 0) {
-            carritoElement.innerHTML = '<p>El carrito está vacío</p>';
-        } else {
-            // Recorre los productos en el carrito y muestra la información
-            carrit.forEach(producto => {
-                const productoElement = document.createElement('div');
-                productoElement.classList.add('producto-carrito', 'border', 'p-3', 'm-2');
+    // Limpia el contenido actual del carrito
+    carritoElement.innerHTML = '';
 
-                // Añade la imagen del producto
-                const imagenElement = document.createElement('img');
-                imagenElement.src = producto.imagen;
-                imagenElement.alt = producto.nombre;
-                imagenElement.classList.add('img-fluid', 'mb-3');
-                productoElement.appendChild(imagenElement);
+    // Verifica si hay productos en el carrito
+    if (carrito.length === 0) {
+        carritoElement.innerHTML = '<p>El carrito está vacío</p>';
+    } else {
+        // Recorre los productos en el carrito y muestra la información
+        carrito.forEach(producto => {
+            const productoElement = document.createElement('div');
+            productoElement.classList.add('producto-carrito', 'border', 'p-3', 'm-2');
 
-                // Añade la información del producto
-                const infoElement = document.createElement('div');
-                infoElement.classList.add('info-producto');
-                infoElement.innerHTML = `<p>${producto.nombre} - Precio: ${producto.precio}</p>`;
-                productoElement.appendChild(infoElement);
+            // Añade la imagen del producto
+            const imagenElement = document.createElement('img');
+            imagenElement.src = producto.imagen;
+            imagenElement.alt = producto.nombre;
+            imagenElement.classList.add('img-fluid', 'mb-3');
+            productoElement.appendChild(imagenElement);
 
-                carritElement.appendChild(productoElement);
-            });
-        }
+            // Añade la información del producto
+            const infoElement = document.createElement('div');
+            infoElement.classList.add('info-producto');
+            infoElement.innerHTML = `<p>${producto.nombre} - Precio: ${producto.precio}</p>`;
+            productoElement.appendChild(infoElement);
+
+            carritoElement.appendChild(productoElement);
+        });
     }
+}
 
-    // Lógica de inicio de sesión (simulada)
-    function iniciarSesion() {
-        // ... (lógica de inicio de sesión)
-        // Después del inicio de sesión exitoso, puedes agregar productos al carrito
-        // Ejemplo: agregarAlCarrito({ nombre: 'Producto de ejemplo', precio: 29.99, imagen: 'ruta/de/la/imagen.jpg' });
+// Lógica de inicio de sesión (simulada)
+function iniciarSesion() {
+    // ... (lógica de inicio de sesión)
+    // Después del inicio de sesión exitoso, puedes agregar productos al carrito
+    // Ejemplo: agregarAlCarrito({ nombre: 'Producto de ejemplo', precio: 29.99, imagen: 'ruta/de/la/imagen.jpg' });
 
-        // Redirige a la página principal
-        window.location.href = 'paginaHTML.html';
+    // Redirige a la página principal
+    window.location.href = 'paginaHTML.html';
 
-        // Importante: evita que el formulario se envíe
-        return false;
-    }
+    // Importante: evita que el formulario se envíe
+    return false;
+}
 
-    // Verifica si hay un carrito almacenado en el almacenamiento local al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
-        // Actualiza la visualización del carrito al cargar la página
-        actualizarCarrito();
-    });
+// Verifica si hay un carrito almacenado en el almacenamiento local al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // Actualiza la visualización del carrito al cargar la página
+    actualizarCarrito();
+});
 
 const productos = [
-    { id: 1, nombre: 'Play Station 4 Pro', precio: 3000.00, imagen: 'https://gmedia.playstation.com/is/image/SIEPDC/ps4-pro-product-thumbnail-01-en-14sep21?$facebook$' },
+    { id: 1, nombre: 'Play Station 4 Pro', precio: 3000.00, imagen: 'https://www.compraderas.com.bo/wp-content/uploads/2017/03/Playstation-4-Pro.jpg'},
     { id: 2, nombre: 'Air Jordan 1 Mid', precio: 3119.00, imagen:'https://images.vegnonveg.com/resized/700X573/9624/air-jordan-1-mid-whitegym-red-black_1-64a7d89496d46.jpg'},
     { id: 3, nombre: 'Air Jordan 1 Mid', precio: 3119.00 },
     { id: 4, nombre: 'Air Jordan 1 Mid', precio: 3119.00 },
