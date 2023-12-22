@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bufete de Abogados TRAN TECH</title>
+    <!-- Enlace a la CDN de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FECB00;
+            color: #000;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #0066B2;
+            color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            background-color: #0066B2;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #0066B2;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #005195;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0066B2;
+            color: #fff;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <h1 style="color: #fff;">Bienvenido a Bufete Legal TRAM TECH</h1>
+        <p style="color: #fff;">Su Defensor Legal de Confianza</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="abogados.html">Abogados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+           <select id="navigationMenu" onchange="navigateToSection()" class="form-control ml-2">
+                <option value="#inicio">Inicio</option>
+                <option value="servicios.html">Servicios</option>
+                <option value="abogados.html">Abogados</option>
+                <option value="#contacto">Contacto</option>
+            </select>
+        </div>
+    </nav>
+
+    <section id="inicio" class="container">
+        <h2>Bufete Legal TRAN TECH</h2>
+        <img src="R8rrK4.gif" alt="Bufete Legal TRAM TECH(PROFESIONALES EN GESTIÓN DE TRÁMITES)" class="img-fluid rounded">
+        <p>Somos un bufete de abogados comprometidos con la excelencia y la defensa de nuestros clientes. Nuestra misión es proporcionar asesoramiento legal confiable y representación experta en una variedad de áreas del derecho.</p>
+    </section>
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <p>Estamos aquí para ayudarlo. Póngase en contacto con nosotros para programar una consulta o para obtener más información sobre cómo podemos servirle mejor.</p>
+        <address>
+            <strong>Bufete Legal TRAM TECH</strong><br>
+            Dirección: [LA PAZ - BOLIVIA - EDIFICIO - MUTUAL LA PRIMERA - CALLE COLOMBIA]<br>
+            Correo Electrónico: <a href="mailto:abogadosatuservicio@gmail.com">abogadosatuservicio@gmail.com</a><br>
+            WhatsApp: <a href="https://wa.me/61191159 - 67343632">61191159 - 67343632</a>
+        </address>
+    </section>
+
+    <footer class="container">
+        <p>&copy; 2023 Bufete Legal TRAN TECH. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace a la CDN de Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript function to navigate to the selected section
+        function navigateToSection() {
+            var selectedSection = document.getElementById("navigationMenu").value;
+            window.location.href = selectedSection;
+        }
+    </script>
+
+</body>
+</html>

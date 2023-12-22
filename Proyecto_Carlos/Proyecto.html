@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bufete de Abogados TRAN TECH</title>
+    <!-- Enlace a la CDN de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background: url('15791675356148.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(242, 242, 242, 0.9);
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .floating-img {
+            float: left;
+            margin: 0 20px 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            margin-top: 20px;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+            color: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-light text-center p-4 rounded">
+        <h1>Bienvenido a Bufete Legal TRAM TECH(PROFESIONALES EN GESTIÓN DE TRÁMITES)</h1>
+        <p>Su Defensor Legal de Confianza</p>
+    </header>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-3 rounded">
+        <ul>
+            <li class="nav-item" ><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#abogados">Abogados</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu">Menú de Opciones</a></li>
+        </ul>
+
+        <select id="navigationMenu" onchange="navigateToSection()">
+            <option value="#inicio">Inicio</option>
+            <option value="#servicios">Servicios</option>
+            <option value="#abogados">Abogados</option>
+            <option value="#contacto">Contacto</option>
+            <option value="#menu">Menú de Opciones</option>
+        </select>
+    </nav>
+
+    <section id="inicio" >
+        <h2>Bufete Legal TRAN TECH</h2>
+        <img src="R8rrK4.gif" alt="Bufete Legal TRAM TECH(PROFESIONALES EN GESTIÓN DE TRÁMITES)" class="floating-img">
+        <p>Somos un bufete de abogados comprometidos con la excelencia y la defensa de nuestros clientes. Nuestra misión es proporcionar asesoramiento legal confiable y representación experta en una variedad de áreas del derecho.</p>
+    </section>
+
+    <section id="servicios" >
+        <h2>Servicios Legales</h2>
+        <p>Ofrecemos una amplia gama de servicios legales, incluyendo asesoramiento jurídico, representación en juicios, resolución alternativa de conflictos y más. Nuestro objetivo es encontrar soluciones efectivas y defender los derechos de nuestros clientes.</p>
+
+        <h3>ALGUNO DE NUESTROS SERVICIOS:</h3>
+        <ol>
+            <li>Asesoramiento Jurídico</li>
+            <li>Representación en Juicios</li>
+        </ol>
+    </section>
+
+    <section id="abogados" class="text-center p-4 mb-4 bg-light rounded">
+        <h2>Nuestros Abogados</h2>
+        <p>Conozca a nuestro equipo de abogados altamente calificados. Cada miembro de nuestro bufete está dedicado a proporcionar servicios legales de calidad y a abogar enérgicamente por nuestros clientes.</p>
+    </section>
+
+    <section id="contacto" class="text-center p-4 mb-4 bg-light rounded">
+        <h2>Contacto</h2>
+        <p>Estamos aquí para ayudarlo. Póngase en contacto con nosotros para programar una consulta o para obtener más información sobre cómo podemos servirle mejor.</p>
+        <address>
+            <strong>Bufete Legal TRAM TECH</strong><br>
+            Dirección: [LA PAZ - BOLIVIA - EDIFICIO - MUTUAL LA PRIMERA - CALLE COLOMBIA]<br>
+            Correo Electrónico: <a href="mailto:abogadosatuservicio@gmail.com">abogadosatuservicio@gmail.com</a><br>
+            WhatsApp: <a href="https://wa.me/61191159 - 67343632">61191159 - 67343632</a>
+        </address>
+    </section>
+
+    <section id="menu">
+        <h2>Menú de Opciones</h2>
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Consulta Legal</td>
+                <td>150 bs</td>
+            </tr>
+            <tr>
+                <td>Representación en Juicio</td>
+                <td>200 bs/hora</td>
+            </tr>
+            <tr>
+                <td>Asesoramiento Empresarial</td>
+                <td>180 bs</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer class="bg-light text-center p-3 rounded mt-4">
+        <p>&copy; 2023 Bufete Legal TRAN TECH. Todos los derechos reservados.</p>
+    </footer>
+
+     <!-- Enlace a la CDN de Bootstrap JS y Popper.js -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+     <script>
+         // JavaScript function to navigate to the selected section
+         function navigateToSection() {
+             var selectedSection = document.getElementById("navigationMenu").value;
+             window.location.href = selectedSection;
+         }
+     </script>
+
+</body>
+</html>
+

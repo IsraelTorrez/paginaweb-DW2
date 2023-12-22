@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bufete de Abogados TRAN TECH</title>
+    <!-- Enlace a la CDN de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FECB00;
+            color: #000;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #0066B2;
+            color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            background-color: #0066B2;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #0066B2;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #005195;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0066B2;
+            color: #fff;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <h1 style="color: #fff;">Bienvenido a Bufete Legal TRAM TECH</h1>
+        <p style="color: #fff;">Su Defensor Legal de Confianza</p>
+        <h2 style="color: #fff;">Servicios</h2>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="PaginaExpres.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="abogados.html">Abogados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menú de Opciones</a></li>
+            </ul>
+            <select id="navigationMenu" onchange="navigateToSection()" class="form-control ml-2">
+                <option value="PaginaExpres.html">Inicio</option>
+                <option value="abogados.html">Abogados</option>
+                <option value="#menu">Menú de Opciones</option>
+            </select>
+        </div>
+    </nav>
+
+    <section id="inicio" class="container">
+        <h2>Servicios Legales</h2>
+        <p>Ofrecemos una amplia gama de servicios legales, incluyendo asesoramiento jurídico, representación en juicios, resolución alternativa de conflictos y más. Nuestro objetivo es encontrar soluciones efectivas y defender los derechos de nuestros clientes.</p>
+
+        <h3>ALGUNO DE NUESTROS SERVICIOS:</h3>
+        <ol>
+            <li>Asesoramiento Jurídico</li>
+            <li>Representación en Juicios</li>
+        </ol>
+    </section>
+    <section id="menu" class="container">
+        <h2>Menú de Opciones</h2>
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Consulta Legal</td>
+                <td>150 bs</td>
+            </tr>
+            <tr>
+                <td>Representación en Juicio</td>
+                <td>200 bs/hora</td>
+            </tr>
+            <tr>
+                <td>Asesoramiento Empresarial</td>
+                <td>180 bs</td>
+            </tr>
+        </table>
+    </section>
+    <footer class="container">
+        <p>&copy; 2023 Bufete Legal TRAN TECH. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace a la CDN de Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript function to navigate to the selected section
+        function navigateToSection() {
+            var selectedSection = document.getElementById("navigationMenu").value;
+            window.location.href = selectedSection;
+        }
+    </script>
+
+</body>
+</html>
